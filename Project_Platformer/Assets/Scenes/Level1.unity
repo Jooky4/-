@@ -125,7 +125,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u0422\u043E\u043B\u0441\u0442\u044B\u0439 \u04122 \u0431\u0435\u0437 \u043A\u043E\u043D\u0442\u0443\u0440\u0430
     (3)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,7 +235,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u0422\u043E\u043B\u0441\u0442\u044B\u0439 \u04122 \u0431\u0435\u0437 \u043A\u043E\u043D\u0442\u0443\u0440\u0430
     (16)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -295,12 +295,78 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292610209}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 42.1, y: 14.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &324182607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 324182610}
+  - component: {fileID: 324182609}
+  - component: {fileID: 324182608}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &324182608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324182607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &324182609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324182607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &324182610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324182607}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &383210743
 GameObject:
@@ -345,7 +411,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u0422\u043E\u043B\u0441\u0442\u044B\u0439 \u04122 \u0431\u0435\u0437 \u043A\u043E\u043D\u0442\u0443\u0440\u0430
     (14)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -425,7 +491,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u0422\u043E\u043B\u0441\u0442\u044B\u0439 \u04122 \u0431\u0435\u0437 \u043A\u043E\u043D\u0442\u0443\u0440\u0430
     (6)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -505,7 +571,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u0422\u043E\u043B\u0441\u0442\u044B\u0439 \u04122 \u0431\u0435\u0437 \u043A\u043E\u043D\u0442\u0443\u0440\u0430
     (10)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -585,7 +651,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u0422\u043E\u043B\u0441\u0442\u044B\u0439 \u04122 \u0431\u0435\u0437 \u043A\u043E\u043D\u0442\u0443\u0440\u0430
     (4)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -664,7 +730,7 @@ GameObject:
   - component: {fileID: 793316300}
   m_Layer: 0
   m_Name: "\u0422\u043E\u043B\u0441\u0442\u044B\u0439 \u04122 \u0431\u0435\u0437 \u043A\u043E\u043D\u0442\u0443\u0440\u0430"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -744,7 +810,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u0422\u043E\u043B\u0441\u0442\u044B\u0439 \u04122 \u0431\u0435\u0437 \u043A\u043E\u043D\u0442\u0443\u0440\u0430
     (2)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -824,7 +890,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u0422\u043E\u043B\u0441\u0442\u044B\u0439 \u04122 \u0431\u0435\u0437 \u043A\u043E\u043D\u0442\u0443\u0440\u0430
     (11)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -904,7 +970,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u0422\u043E\u043B\u0441\u0442\u044B\u0439 \u04122 \u0431\u0435\u0437 \u043A\u043E\u043D\u0442\u0443\u0440\u0430
     (9)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -983,7 +1049,7 @@ GameObject:
   - component: {fileID: 1085864973}
   m_Layer: 0
   m_Name: "\u0414\u043B\u0438\u043D\u043D\u044B\u0439 \u04322"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1062,7 +1128,7 @@ GameObject:
   - component: {fileID: 1130812027}
   m_Layer: 0
   m_Name: "\u0412\u0435\u0440\u0442\u0438\u043A\u0430\u043B\u044C \u04322"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1142,7 +1208,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u0422\u043E\u043B\u0441\u0442\u044B\u0439 \u04122 \u0431\u0435\u0437 \u043A\u043E\u043D\u0442\u0443\u0440\u0430
     (8)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1285,7 +1351,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240890067}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.7, y: -22.43791, z: -42.1}
+  m_LocalPosition: {x: 12.34, y: 3.1, z: -15.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1304,7 +1370,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u0422\u043E\u043B\u0441\u0442\u044B\u0439 \u04122 \u0431\u0435\u0437 \u043A\u043E\u043D\u0442\u0443\u0440\u0430
     (7)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1384,7 +1450,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u0422\u043E\u043B\u0441\u0442\u044B\u0439 \u04122 \u0431\u0435\u0437 \u043A\u043E\u043D\u0442\u0443\u0440\u0430
     (5)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1463,7 +1529,7 @@ GameObject:
   - component: {fileID: 1518751588}
   m_Layer: 0
   m_Name: "\u0414\u043B\u0438\u043D\u043D\u044B\u0439 \u04322 (1)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1543,7 +1609,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u0422\u043E\u043B\u0441\u0442\u044B\u0439 \u04122 \u0431\u0435\u0437 \u043A\u043E\u043D\u0442\u0443\u0440\u0430
     (17)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1623,7 +1689,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u0422\u043E\u043B\u0441\u0442\u044B\u0439 \u04122 \u0431\u0435\u0437 \u043A\u043E\u043D\u0442\u0443\u0440\u0430
     (15)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1772,7 +1838,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u0422\u043E\u043B\u0441\u0442\u044B\u0439 \u04122 \u0431\u0435\u0437 \u043A\u043E\u043D\u0442\u0443\u0440\u0430
     (13)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1849,10 +1915,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1657524060}
   - component: {fileID: 1657524059}
+  - component: {fileID: 1657524061}
   m_Layer: 0
   m_Name: "\u0422\u043E\u043B\u0441\u0442\u044B\u0439 \u04122 \u0431\u0435\u0437 \u043A\u043E\u043D\u0442\u0443\u0440\u0430
     (18)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1919,6 +1986,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1657524061
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657524058}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.69901085, y: -1.3930659}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 30, y: 20}
+    newSize: {x: 30, y: 20}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.3744087, y: 3.4473352}
+  m_EdgeRadius: 0
 --- !u!1 &1783999249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,7 +2025,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u0422\u043E\u043B\u0441\u0442\u044B\u0439 \u04122 \u0431\u0435\u0437 \u043A\u043E\u043D\u0442\u0443\u0440\u0430
     (12)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2011,7 +2104,7 @@ GameObject:
   - component: {fileID: 1999652029}
   m_Layer: 0
   m_Name: "\u0412\u0435\u0440\u0442\u0438\u043A\u0430\u043B\u044C \u04322 (1)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2091,7 +2184,7 @@ GameObject:
   m_Layer: 0
   m_Name: "\u0422\u043E\u043B\u0441\u0442\u044B\u0439 \u04122 \u0431\u0435\u0437 \u043A\u043E\u043D\u0442\u0443\u0440\u0430
     (1)"
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
