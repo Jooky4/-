@@ -6,7 +6,8 @@ public class Finish : MonoBehaviour
 {
 
     private GameObject checkObject;
-
+    [SerializeField]
+    private GameObject victoryPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +23,12 @@ public class Finish : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        Debug.Log("Trigger");
+        victoryPanel.SetActive(true);
+            
     }
 
+
+   
 
 }
