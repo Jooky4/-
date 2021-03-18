@@ -4,25 +4,26 @@ using UnityEngine;
 
 public class CharacterController2D : MonoBehaviour
 {
-    public float speed = 10;
-    public float jumpForce = 10;
+    public float speed = 10;          // скорость перемещения
+    public float jumpForce = 10;      // скорость прыжка
     [SerializeField]
-    private bool isGround = false;
+    private bool isGround = false;    // флаг земля
     private Rigidbody2D rb2D;
-    private float horizontal;
-    private float vertical;
-    private bool Jumped = true;
-    private bool facingRight = true;
+    private float horizontal;         //ось горизонт 
+    private float vertical;            //ось вертикаль
+    private bool Jumped = true;        // флаг прыжок
+    private bool facingRight = true;   // куда повернут
     [SerializeField]
-    private bool isLadder = false;
+    private bool isLadder = false;     // флаг лесницы
     [SerializeField]
-    private bool isjump = false;
+    private bool isjump = false;       // флаг прыжок
+    public KeyCode action = KeyCode.E; // клавиша действия
   
 
     // Start is called before the first frame update
     void Start()
     {
-        rb2D = GetComponent<Rigidbody2D>();
+        rb2D = GetComponent<Rigidbody2D>();   // кеш тела
 
     }
 
@@ -41,14 +42,34 @@ public class CharacterController2D : MonoBehaviour
         
     }
 
-
-    void UpdateAxis()
+    /// <summary>
+    /// опрос кнопок
+    /// </summary>
+    void UpdateAxis()  
     {
-        Jumped = Input.GetButtonDown("Jump");
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
+        Jumped = Input.GetButtonDown("Jump");        // прыжок
+        horizontal = Input.GetAxis("Horizontal");   // A   D
+        vertical = Input.GetAxis("Vertical");        // W   S
+
+        if (Input.GetKeyDown(action))              // E
+        {
+
+        }
+
     }
 
+
+    /// <summary>
+    /// Метод для действия
+    /// </summary>
+    void Action()
+    {
+
+    }
+
+    /// <summary>
+    /// Проверка на движение в противополжую сторону
+    /// </summary>
     void UpdateFlip()
     {
         if (horizontal > 0 && !facingRight)
@@ -57,6 +78,10 @@ public class CharacterController2D : MonoBehaviour
             Flip();
     }
 
+
+    /// <summary>
+    /// Переворот противоположную сторону
+    /// </summary>
     void Flip()
     {
         facingRight = !facingRight;
@@ -65,47 +90,66 @@ public class CharacterController2D : MonoBehaviour
         transform.localScale = theScale;
     }
 
+
+    /// <summary>
+    /// Движение вправо влево
+    /// </summary>
     private void Move()
     {
        rb2D.velocity = new Vector2(horizontal * speed, rb2D.velocity.y);
     }
 
+    /// <summary>
+    /// Прыжок
+    /// </summary>
     private void Jump()
     {
-        if (Jumped)
+        if (Jumped) // если нажата пробел
         {
-            if (isGround)
+            if (isGround) // если на земле 
             {
-               rb2D.AddForce(Vector2.up * jumpForce);
+               rb2D.AddForce(Vector2.up * jumpForce); // прыгай 
             }
-            isGround = false;
-            isjump = true;
+            isGround = false;  // не на земле 
+            isjump = true;     // в прыжке
 
         }
     }
 
 
-
+    /// <summary>
+    /// проверка на землю 
+    /// </summary>
+    /// <param name="coll"></param>
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.transform.tag == "Ground")
+        if (coll.transform.tag == "Ground")  // если обьект столкновения имеет Тег= земля
         {
-            isGround = true;
-            isjump = false;
+            isGround = true;  // это земля
+            isjump = false;   // не прыгаем
 
         }
       
     }
 
+    /// <summary>
+    /// Проверка входа на лесницу
+    /// </summary>
+    /// <param name="col"></param>
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "Ladder")
+        if (col.tag == "Ladder")   // если таг лесница
         {
-            isLadder = true;
+            isLadder = true;     // это лесница
         }
         //Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
 
     }
+
+    /// <summary>
+    /// выход с лесницы
+    /// </summary>
+    /// <param name="col"></param>
     private void OnTriggerExit2D(Collider2D col)
     {
         if (col.tag == "Ladder")
@@ -113,26 +157,30 @@ public class CharacterController2D : MonoBehaviour
             isLadder = false;
         }
      }
-    void UpdateMoveLadder()
+
+    /// <summary>
+    /// Движение по лесницы
+    /// </summary>
+    void UpdateMoveLadder()   // Пока так дальше  будем  переделывать
     {
-        if (isLadder)
+        if (isLadder) // если на леснице
         {
-            if (vertical != 0)
+            if (vertical != 0) // если нажаты   W или  S
             {
                 transform.Translate(new Vector2(0, speed * vertical * Time.fixedDeltaTime)); // движение по лестнице
-                isGround = false;
+                isGround = false; // не на  земле
             }
 
-            if (!isGround && !isjump)
+            if (!isGround && !isjump)  // если не на земле и не в прыжке
             {
 
-                rb2D.gravityScale = 0;
+                rb2D.gravityScale = 0;  // откл гравитацию
             }
 
         }
         else
         {
-            rb2D.gravityScale = 1;
+            rb2D.gravityScale = 1;     // вкл гравитацию
         }
 
 
